@@ -68,7 +68,7 @@ def _enhance_img(img: np.ndarray, codeformer_fidelity=0.8) -> np.ndarray:
     face_helper = get_face_helper(img.shape)
     face_helper.clean_all()
     face_helper.read_image(img)
-    num_faces = face_helper.get_face_landmarks_5(only_center_face=False, resize=face_helper.face_size, eye_dist_threshold=2)
+    num_faces = face_helper.get_face_landmarks_5(only_center_face=False, resize=512, eye_dist_threshold=2)
     if num_faces == 0:
         return img
 
