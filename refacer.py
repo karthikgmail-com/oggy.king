@@ -439,7 +439,7 @@ class Refacer:
                      # Process faces will apply enhancement via self.codeformer_fidelity
                      refaced_bgr = self.process_first_face(bgr_image.copy()) if self.first_face else self.process_faces(bgr_image.copy())
                      # No separate enhancement call needed here as it's done in process_first_face/process_faces
-                     enhanced_bgr = refaced_bgr
+                     enhanced_bgr = refaced_bgr 
                      enhanced_rgb = cv2.cvtColor(enhanced_bgr, cv2.COLOR_BGR2RGB)
                      enhanced_pil = Image.fromarray(enhanced_rgb)
                      frames.append(enhanced_pil)
